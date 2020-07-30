@@ -100,14 +100,14 @@ function think(){
   return aiMoves;
 }
 
-function Disc(player){
+function Image(player){
   this.player = player;
   this.color = player == 1 ? 'red' : 'yellow';
   this.id = id.toString();
   id++;
   
   this.addToScene = function(){
-    board.innerHTML += '<div id="d'+this.id+'" class="disc '+this.color+'"></div>';
+    board.innerHTML += '<div id="d'+this.id+'" class="image '+this.color+'"></div>';
     if(currentPlayer==2){
       //computer move
       var possibleMoves = think();

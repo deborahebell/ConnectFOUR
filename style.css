@@ -31,7 +31,7 @@ body{
     position:relative;
   }
   
-  .disc{
+  .image{
     position:absolute;
     z-index:-1;
     top:-55px;
@@ -42,18 +42,20 @@ body{
     transition:all .2s;
   }
   
-  .disc.red{
-    background: goldenrod;
+  .image{
+    background: url(assets/kanyehead.png);
+    size: 100px;
     border: solid;
     border-width: 1px;
-    border-color: rgb(240, 237, 230);
+    border-color: black;
   }
   
-  .disc.yellow{
-    background: black;
+  .image{
+    background: url(assets/KimKHead2.jpg);
+    size: 100px
   }
 
-  #mycanvas {
+  #mycanvas{
     justify-content: center;
     width:800px;
      height:800px;
