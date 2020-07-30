@@ -4,7 +4,7 @@ var currentCol;
 var currentRow;
 var currentPlayer;
 var id = 1;
-
+//  <script src="./app.js"> </script>
 newgame();
 
 function newgame(){

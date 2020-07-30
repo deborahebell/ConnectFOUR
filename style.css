@@ -27,7 +27,7 @@ body{
     width:434px;
     height:374px;
     margin:0 auto;
-    background:url("http://img.sr/images/2014/01/28/base.png") 0 0 no-repeat;
+    background: transparent 0 0 no-repeat;
     position:relative;
   }
   
@@ -43,14 +43,24 @@ body{
   }
   
   .disc.red{
-    background:#170ad1;
+    background: goldenrod;
+    border: solid;
+    border-width: 1px;
+    border-color: rgb(240, 237, 230);
   }
   
   .disc.yellow{
-    background:#da1103;
+    background: black;
   }
 
   #mycanvas {
+    justify-content: center;
     width:800px;
      height:800px;
   }
+
+  .playImage{
+    align-items: baseline;
+  }
+
+  
