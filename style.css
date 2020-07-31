@@ -24,10 +24,10 @@ body{
   }
   
   #game-table{
-    width:600px;
-    height:600px;
+    width:800px;
+    height:800px;
     margin:0 auto;
-    background: transparent 0 0 no-repeat;
+    background: transparent 0 0 norepeat;
     position:relative;
   }
   
@@ -46,11 +46,13 @@ body{
     background: url(assets/SmileHead2.png);
     border: solid;
     border-width: 1px;
+    background-repeat: no-repeat;
   
   }
   
   .disc.yellow{
     background: url(assets/KimKHead.png);
+    background-repeat: no-repeat;
   }
 
   #mycanvas{
