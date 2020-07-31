@@ -188,7 +188,12 @@
 // function moveit(who,where){
 //     document.getElementById('d'+who).style.top = where+'px';
 // }
-
+// -----------------WORKING CODE--------------------------------------
+$(function() {
+  const $app = $('#app');
+  $app.addClass('has-loaded');
+});
+// THE GAME
 var gameField = new Array();
 var board = document.getElementById("game-table");
 var currentCol;

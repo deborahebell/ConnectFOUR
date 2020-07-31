@@ -1,43 +1,156 @@
-var main = document.getElementById('main');
 /**
- * Hide element
+ * Asset pre-loader object. Loads all images
  */
-function hide(el) {
-  el.style.display = 'hide';
-}
-/**
- * Show element
- */
-function show(el) {
-  el.style.display = 'block';
-} 
-/**
- * Show the main menu after loading all assets
- */
-function mainMenu() {
-  show(main);
-}
-/**
- * Click handlers for the different menu screens
- */
-document.querySelectorAll('.play')[0].addEventListener('click', function() {
-  hide(main);
-  startGame();
-});
+// var assetLoader = (function() {
+//     // images dictionary
+//     this.imgs        = {
+//       "kanye"            : "background: url(assets/SmileHead2.png)",
+//       "kimk"           : "background: url(assets/KimKHead.png)",
+     
+//     };
+//     var assetsLoaded = 0;                                // how many assets have been loaded
+//     var numImgs      = Object.keys(this.imgs).length;    // total number of image assets
+//     this.totalAssest = numImgs;                          // total number of assets
+//     /**
+//      * Ensure all assets are loaded before using them
+//      * @param {number} dic  - Dictionary name ('imgs')
+//      * @param {number} name - Asset name in the dictionary
+//      */
+//     function assetLoaded(dic, name) {
+//       // don't count assets that have already loaded
+//       if (this[dic][name].status !== "loading" ) {
+//         return;
+//       }
+//       this[dic][name].status = "loaded";
+//       assetsLoaded++;
+//       // finished callback
+//       if (assetsLoaded === this.totalAssest && typeof this.finished === "function") {
+//         this.finished();
+//       }
+//     }
+//     /**
+//      * Create assets, set callback for asset loading, set asset source
+//      */
+//     this.downloadAll = function() {
+//       var _this = this;
+//       var src;
+//       // load images
+//       for (var img in this.imgs) {
+//         if (this.imgs.hasOwnProperty(img)) {
+//           src = this.imgs[img];
+//           // create a closure for event binding
+//           (function(_this, img) {
+//             _this.imgs[img] = new Image();
+//             _this.imgs[img].status = "loading";
+//             _this.imgs[img].name = img;
+//             _this.imgs[img].onload = function() { assetLoaded.call(_this, "imgs", img) };
+//             _this.imgs[img].src = src;
+//           })(_this, img);
+//         }
+//       }
+//     }
+//     return {
+//       imgs: this.imgs,
+//       totalAssest: this.totalAssest,
+//       downloadAll: this.downloadAll
+//     };
+//   })();
+//   assetLoader.finished = function() {
+//     newgame();
+//   }
 
-// const shipImage = document.createElement('img');
-// shipImage.src = "assets/Gucci.png"; 
+//   function newgame() {
+//     // setup the player
+//     player.width  = 60;
+//     player.height = 96;
+//     player.speed  = 6;
+//     player.sheet  = new SpriteSheet("imgs/normal_walk.png", player.width, player.height);
+//     player.anim   = new Animation(player.sheet, 4, 0, 15);
+//     // create the ground tiles
+//     for (i = 0, length = Math.floor(canvas.width / platformWidth) + 1; i < length; i++) {
+//       ground[i] = {"x": i * platformWidth, "y": platformHeight};
+//     }
+//     background.reset();
+//     animate();
+//   }
+//   /**
+//    * Game loop
+//    */
+//   function animate() {
+//     requestAnimFrame( animate );
+//     background.draw();
+//     for (i = 0; i < ground.length; i++) {
+//       ground[i].x -= player.speed;
+//       ctx.drawImage(assetLoader.imgs.grass, ground[i].x, ground[i].y);
+//     }
+//     if (ground[0].x <= -platformWidth) {
+//       ground.shift();
+//       ground.push({"x": ground[ground.length-1].x + platformWidth, "y": platformHeight});
+//     }
+//     player.anim.update();
+//     player.anim.draw(64, 260);
+//   }
+//   assetLoader.downloadAll();
+// /**
+//  * Load the main menu
+//  */
+// assetLoader.finished = function() {
+//     mainMenu();
+//   }
+//   /**
+//    * Show the main menu after loading all assets
+//    */
+//   function mainMenu() {
+//     $('#main').show();
+//   }
+//   /**
+//    * Click handlers for the different menu screens
+//    */
+//   $('.play').click(function() {
+//     $('#menu').hide();
+//     newgame();
+//   });
 
-// const bigImage = document.createElement('img');
-// bigImage.src = "assets/Connect4.png";
+// var main = document.getElementById('main');
+// /**
+// //  * Hide element
+// //  */
+// // function hide(el) {
+// //   el.style.display = 'hide';
+// // }
+// // /**
+// //  * Show element
+// //  */
+// // function show(el) {
+// //   el.style.display = 'block';
+// // } 
+// // /**
+// //  * Show the main menu after loading all assets
+// //  */
+// // function mainMenu() {
+// //   show(main);
+// // }
+// // /**
+// //  * Click handlers for the different menu screens
+// //  */
+// // document.querySelectorAll('.play')[0].addEventListener('click', function() {
+// //   hide(main);
+// //   newgame();
+// // });
 
-// const logoImage = document.createElement('img');
-// logoImage.src = "assets/Connect4.png";
+// // const shipImage = document.createElement('img');
+// // shipImage.src = "assets/Gucci.png"; 
 
-// const playImage = document.createElement('img');
-// playImage.src = "assets/play.png";
+// // const bigImage = document.createElement('img');
+// // bigImage.src = "assets/Connect4.png";
 
-// const instructionsImage = document.createElement('img');
+// // const logoImage = document.createElement('img');
+// // logoImage.src = "assets/Connect4.png";
+
+// // const playImage = document.createElement('img');
+// // playImage.src = "assets/play.png";
+
+// // const instructionsImage = document.createElement('img');
 // instructionsImage.src = "assets/instructions.png";
 
 // const settingsImage = document.createElement('img');
