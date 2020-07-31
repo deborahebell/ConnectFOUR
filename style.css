@@ -18,14 +18,14 @@ body{
   }
   
   #game-base{
-    width:640px;  
+    width:800px;  
     margin:0 auto;
     padding-top:60px;
   }
   
   #game-table{
-    width:434px;
-    height:374px;
+    width:600px;
+    height:600px;
     margin:0 auto;
     background: transparent 0 0 no-repeat;
     position:relative;
@@ -35,10 +35,10 @@ body{
     position:absolute;
     z-index:-1;
     top:-55px;
-    left:14px;
-    width:124px;
-    height:104px;
-    border-radius:46px;
+    left:12px;
+    width:60px;
+    height:60px;
+    border-radius:40px;
     transition: all .2s;
   }
   
@@ -50,7 +50,7 @@ body{
   }
   
   .disc.yellow{
-    background: url(assets/kimkhead2.png);
+    background: url(assets/KimKHead.png);
   }
 
   #mycanvas{

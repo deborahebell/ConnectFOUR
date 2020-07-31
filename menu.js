@@ -36,9 +36,6 @@ function update() {
 
 timerId = setInterval(update, 1000/frames);
 
-function update() {
-   clear(),move(),draw()
-};
 
 function clear() {
     context.clearRect(0,0,width,height);
@@ -110,45 +107,45 @@ creditsImage.onload = function(){
 }
 //Telling the images what to do using drawImage function
 
-var mouseX;
-var mouseY;
+// var mouseX;
+// var mouseY;
  
-canvas.addEventListener("mousemove", checkPos);
+// canvas.addEventListener("mousemove", checkPos);
 
-function checkPos(mouseEvent){
-    mouseX = mouseEvent.pageX - this.offsetLeft;
-    mouseY = mouseEvent.pageY - this.offsetTop;
-}
+// function checkPos(mouseEvent){
+//     mouseX = mouseEvent.pageX - this.offsetLeft;
+//     mouseY = mouseEvent.pageY - this.offsetTop;
+// }
 
-if(mouseEvent.pageX || mouseEvent.pageY == 0){
-    mouseX = mouseEvent.pageX - this.offsetLeft;
-    mouseY = mouseEvent.pageY - this.offsetTop;
-}else if(mouseEvent.offsetX || mouseEvent.offsetY == 0){
-    mouseX = mouseEvent.offsetX;
-    mouseY = mouseEvent.offsetY;
-}
+// if(mouseEvent.pageX || mouseEvent.pageY == 0){
+//     mouseX = mouseEvent.pageX - this.offsetLeft;
+//     mouseY = mouseEvent.pageY - this.offsetTop;
+// }else if(mouseEvent.offsetX || mouseEvent.offsetY == 0){
+//     mouseX = mouseEvent.offsetX;
+//     mouseY = mouseEvent.offsetY;
+// }
 
-var shipX = [0,0];
-var shipY = [0,0];
-var shipWidth = 35;
-var shipHeight = 40;
+// var shipX = [0,0];
+// var shipY = [0,0];
+// var shipWidth = 35;
+// var shipHeight = 40;
  
-var shipVisible = false;
-var shipSize = shipWidth;
-var shipRotate = 0;
-for(i = 0; i < buttonX.length; i++){
-    if(mouseX > buttonX[i] && mouseX < buttonX[i] + buttonWidth[i]){
-        if(mouseY > buttonY[i] && mouseY < buttonY[i] + buttonHeight[i]){
+// var shipVisible = false;
+// var shipSize = shipWidth;
+// var shipRotate = 0;
+// for(i = 0; i < buttonX.length; i++){
+//     if(mouseX > buttonX[i] && mouseX < buttonX[i] + buttonWidth[i]){
+//         if(mouseY > buttonY[i] && mouseY < buttonY[i] + buttonHeight[i]){
              
-        }
-    }else{
+//         }
+//     }else{
          
-    }
-}
-shipVisible = true;
+//     }
+// }
+// shipVisible = true;
 
-shipX[0] = buttonX[i] - (shipWidth/2) - 2;
-shipY[0] = buttonY[i] + 2;
-shipX[1] = buttonX[i] + buttonWidth[i] + (shipWidth/2); 
-shipY[1] = buttonY[i] + 2;
+// shipX[0] = buttonX[i] - (shipWidth/2) - 2;
+// shipY[0] = buttonY[i] + 2;
+// shipX[1] = buttonX[i] + buttonWidth[i] + (shipWidth/2); 
+// shipY[1] = buttonY[i] + 2;
 
