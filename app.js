@@ -204,13 +204,13 @@ function newgame(){
 }
 
 function checkForVictory(row,col){
-  if(getAdj(row,col,0,1)+getAdj(row,col,0,-1) > 2){
+  if(getAdj(row,col,0,2)+getAdj(row,col,0,-2) > 3){
     return true;
   } else {
-    if(getAdj(row,col,1,0) > 2){
+    if(getAdj(row,col,2,0) > 3){
       return true;
     } else {
-      if(getAdj(row,col,-1,1)+getAdj(row,col,1,-1) > 2){
+      if(getAdj(row,col,-2,2)+getAdj(row,col,2,-2) > 2){
         return true;
       } else {
         if(getAdj(row,col,1,1)+getAdj(row,col,-1,-1) > 2){
