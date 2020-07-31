@@ -1,11 +1,10 @@
-var gameField = new Array();
-var board = document.getElementById("game-table");
-var currentCol;
-var currentRow;
-var currentPlayer;
-var id = 1;
+let gameField = [];
+let board = document.getElementById("game-table");
+let currentCol;
+let currentRow;
+let currentPlayer;
+let id = 1;
 //  <script src="./app.js"> </script>
-newgame();
 
 function newgame(){
   prepareField();

@@ -31,28 +31,26 @@ body{
     position:relative;
   }
   
-  .image{
+  .disc{
     position:absolute;
     z-index:-1;
     top:-55px;
     left:14px;
-    width:46px;
-    height:46px;
+    width:124px;
+    height:104px;
     border-radius:46px;
-    transition:all .2s;
+    transition: all .2s;
   }
   
-  .image{
-    background: url(assets/kanyehead.png);
-    size: 100px;
+  .disc.red{
+    background: url(assets/SmileHead2.png);
     border: solid;
     border-width: 1px;
     border-color: black;
   }
   
-  .image{
-    background: url(assets/KimKHead2.jpg);
-    size: 100px
+  .disc.yellow{
+    background: url(assets/kimkhead2.png);
   }
 
   #mycanvas{
