@@ -1,3 +1,42 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+#menu.main {
+  background-image: url('assets/multi-trans.png');
+}
+#main {
+  display: none;
+  height: 60%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+#main h1 {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.button {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #0e0818;
+  color: white;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  background-color: #24e224;
+  background-image: -webkit-linear-gradient(bottom, #FB1886 0%, #B30D5D 100%);
+  background-image:         linear-gradient(to bottom, #FB1886 0%, #B30D5D 100%);
+  border-radius: 5px;
+}
+.button:hover {
+  background-color: blue;
+  background-image: -webkit-linear-gradient(bottom, #B30D5D 0%, #FB1886 100%);
+  background-image:         linear-gradient(to bottom, #B30D5D 0%, #FB1886 100%);
+}
+/* NOW THIS IS THE GAME BELOW */
 body{
     background:#eee;
   }
@@ -36,16 +75,14 @@ body{
     z-index:-1;
     top:-55px;
     left:12px;
-    width:60px;
-    height:60px;
+    width:70px;
+    height:70px;
     border-radius:40px;
     transition: all .2s;
   }
   
   .disc.red{
     background: url(assets/SmileHead2.png);
-    border: solid;
-    border-width: 1px;
     background-repeat: no-repeat;
   
   }

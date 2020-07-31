@@ -1,25 +1,34 @@
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Connect Four</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+  <script type="text/javascript" src="jquery.2.1.1.min.js"></script>
+</head>
+<body>
+<div id="game-base">
+        <div id="game-table"></div>
+</div>
+  <div class="wrapper">
+    <div id="menu" class="main">
+      <div id="main">
+        <h1>Connect Four</h1>
+        <ul>
+          <li><a href="#" class="button play">Start Game</a></li>
+          <li><a href="#" class="button credits">Credits</a></li>
+        </ul>
+      </div>
+    </div>
+    <canvas id="canvas" width="800" height="480">
+      <p>You're browser does not support the required functionality to play this game.</p>
+      <p>Please update to a modern browser such as <a href="www.google.com/chrome/‎">Google Chrome</a> to play.</p>
+    </canvas>
 </head>
     
 <body>
-    <canvas id="myCanvas" width="800" height="800">
-        <p>Your browser does not support HTML5!</p>
-    </canvas>
-    <h1>Welcome to The Connect Four Game</h1>
-    <p class="info">Connect four is two player game. Defensive AI. Use chrome for best experience.</p>
-    <div id="game-base">
-        <div id="game-table"></div>
-    </div>
-    
     <!-- <script src="./menu.js"> </script> -->
     <script src="./app.js"></script>
-   
  </body>
-  
-</html>

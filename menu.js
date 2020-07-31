@@ -1,110 +1,157 @@
-const shipImage = document.createElement('img');
-shipImage.src = "assets/Gucci.png"; 
+/**
+ * Load the main menu
+ */
+assetLoader.finished = function() {
+    mainMenu();
+  }
+  /**
+   * Show the main menu after loading all assets
+   */
+  function mainMenu() {
+    $('#main').show();
+  }
+  /**
+   * Click handlers for the different menu screens
+   */
+  $('.play').click(function() {
+    $('#menu').hide();
+    startGame();
+  });
 
-const bigImage = document.createElement('img');
-bigImage.src = "assets/Connect4.png";
+  var main = document.getElementById('main');
+  /**
+   * Hide element
+   */
+  function hide(el) {
+    el.style.display = 'hide';
+  }
+  /**
+   * Show element
+   */
+  function show(el) {
+    el.style.display = 'block';
+  } 
+  /**
+   * Show the main menu after loading all assets
+   */
+  function mainMenu() {
+    show(main);
+  }
+  /**
+   * Click handlers for the different menu screens
+   */
+  document.querySelectorAll('.play')[0].addEventListener('click', function() {
+    hide(main);
+    startGame();
+  });
+  
+// const shipImage = document.createElement('img');
+// shipImage.src = "assets/Gucci.png"; 
 
-const logoImage = document.createElement('img');
-logoImage.src = "assets/Connect4.png";
+// const bigImage = document.createElement('img');
+// bigImage.src = "assets/Connect4.png";
 
-const playImage = document.createElement('img');
-playImage.src = "assets/play.png";
+// const logoImage = document.createElement('img');
+// logoImage.src = "assets/Connect4.png";
 
-const instructionsImage = document.createElement('img');
-instructionsImage.src = "assets/instructions.png";
+// const playImage = document.createElement('img');
+// playImage.src = "assets/play.png";
 
-const settingsImage = document.createElement('img');
-settingsImage.src = "assets/settings.png";
+// const instructionsImage = document.createElement('img');
+// instructionsImage.src = "assets/instructions.png";
 
-const creditsImage = document.createElement('img');
-creditsImage.src = "assets/credits.png";
+// const settingsImage = document.createElement('img');
+// settingsImage.src = "assets/settings.png";
 
-// Source Path For MAIN MENU IMAGES
+// const creditsImage = document.createElement('img');
+// creditsImage.src = "assets/credits.png";
 
-const frames = 30;
-let timerId = 0
+// // Source Path For MAIN MENU IMAGES
 
-function update() {
-    clear();
-    //used to clear the canvas 
-    move();
-    //is used for changing the variable values for images
-    draw();
-    //place the stickers
-};
+// const frames = 30;
+// let timerId = 0
 
-
-timerId = setInterval(update, 1000/frames);
-
-
-function clear() {
-    context.clearRect(0,0,width,height);
-};
-
-//this function clears the entire rectangle
-
-var backgroundY = 0;
-var speed = 1;
-function draw() {
-    if(shipVisible == true){
-        context.drawImage(shipImage, shipX[0] - (shipSize/2), shipY[0], shipSize, shipHeight);
-        context.drawImage(shipImage, shipX[1] - (shipSize/2), shipY[1], shipSize, shipHeight);
-    }
-}
-function move(){
-    backgroundY -= speed;
-    if(backgroundY == -1 * height){
-        backgroundY = 0;
-        if(shipSize == shipWidth){
-            shipRotate = -1;
-        }
-        if(shipSize == 0){
-            shipRotate = 1;
-        }
-        shipSize += shipRotate;
-    }
-};
-// this says that the background will seem to continue to scroll with two
-// images stacked on top of each other
-
-const canvas = document.getElementById("myCanvas");
-const context = canvas.getContext("2d");
-const width = canvas.getAttribute('width');
-const height = canvas.getAttribute('height');
-// these are the canvas main menu variables
-
-const buttonX = [192,150,150,160];
-const buttonY = [150,140,180,220];
-const buttonWidth = [98,260,188,170];
-const buttonHeight = [40,40,40,40];
-//Mouse over function arrays for the main menu
-
-context.drawImage(bigImage, 0, backgroundY);
-context.drawImage(logoImage, 50,-10);
-context.drawImage(playImage, buttonX[0], buttonY[0]);
-context.drawImage(instructionsImage, buttonX[1], buttonY[1]);
-context.drawImage(settingsImage, buttonX[2], buttonY[2]);
-context.drawImage(creditsImage, buttonX[3], buttonY[3]);
+// function update() {
+//     clear();
+//     //used to clear the canvas 
+//     move();
+//     //is used for changing the variable values for images
+//     draw();
+//     //place the stickers
+// };
 
 
-bigImage.onload = function(){
-    context.drawImage(bigImage, 0, 0);
-};
-logoImage.onload = function(){
-    context.drawImage(logoImage, 50, -10);
-}
-playImage.onload = function(){
-    context.drawImage(playImage, buttonX[0], buttonY[0]);
-}
-instructionsImage.onload = function(){
-    context.drawImage(instructionsImage, buttonX[1], buttonY[1]);
-}
-settingsImage.onload = function(){
-    context.drawImage(settingsImage, buttonX[2], buttonY[2]);
-}
-creditsImage.onload = function(){
-    context.drawImage(creditsImage, buttonX[3], buttonY[3]);
-}
+// timerId = setInterval(update, 1000/frames);
+
+
+// function clear() {
+//     context.clearRect(0,0,width,height);
+// };
+
+// //this function clears the entire rectangle
+
+// var backgroundY = 0;
+// var speed = 1;
+// function draw() {
+//     if(shipVisible == true){
+//         context.drawImage(shipImage, shipX[0] - (shipSize/2), shipY[0], shipSize, shipHeight);
+//         context.drawImage(shipImage, shipX[1] - (shipSize/2), shipY[1], shipSize, shipHeight);
+//     }
+// }
+// function move(){
+//     backgroundY -= speed;
+//     if(backgroundY == -1 * height){
+//         backgroundY = 0;
+//         if(shipSize == shipWidth){
+//             shipRotate = -1;
+//         }
+//         if(shipSize == 0){
+//             shipRotate = 1;
+//         }
+//         shipSize += shipRotate;
+//     }
+// };
+// // this says that the background will seem to continue to scroll with two
+// // images stacked on top of each other
+
+// const canvas = document.getElementById("myCanvas");
+// const context = canvas.getContext("2d");
+// const width = canvas.getAttribute('width');
+// const height = canvas.getAttribute('height');
+// // these are the canvas main menu variables
+
+// const buttonX = [192,150,150,160];
+// const buttonY = [150,140,180,220];
+// const buttonWidth = [98,260,188,170];
+// const buttonHeight = [40,40,40,40];
+// //Mouse over function arrays for the main menu
+
+// context.drawImage(bigImage, 0, backgroundY);
+// context.drawImage(logoImage, 50,-10);
+// context.drawImage(playImage, buttonX[0], buttonY[0]);
+// context.drawImage(instructionsImage, buttonX[1], buttonY[1]);
+// context.drawImage(settingsImage, buttonX[2], buttonY[2]);
+// context.drawImage(creditsImage, buttonX[3], buttonY[3]);
+
+
+// bigImage.onload = function(){
+//     context.drawImage(bigImage, 0, 0);
+// };
+// logoImage.onload = function(){
+//     context.drawImage(logoImage, 50, -10);
+// }
+// playImage.onload = function(){
+//     context.drawImage(playImage, buttonX[0], buttonY[0]);
+// }
+// instructionsImage.onload = function(){
+//     context.drawImage(instructionsImage, buttonX[1], buttonY[1]);
+// }
+// settingsImage.onload = function(){
+//     context.drawImage(settingsImage, buttonX[2], buttonY[2]);
+// }
+// creditsImage.onload = function(){
+//     context.drawImage(creditsImage, buttonX[3], buttonY[3]);
+// }
 //Telling the images what to do using drawImage function
 
 // var mouseX;
@@ -148,4 +195,3 @@ creditsImage.onload = function(){
 // shipY[0] = buttonY[i] + 2;
 // shipX[1] = buttonX[i] + buttonWidth[i] + (shipWidth/2); 
 // shipY[1] = buttonY[i] + 2;
-
