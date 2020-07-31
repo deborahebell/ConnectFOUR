@@ -1,50 +1,30 @@
+var main = document.getElementById('main');
 /**
- * Load the main menu
+ * Hide element
  */
-assetLoader.finished = function() {
-    mainMenu();
-  }
-  /**
-   * Show the main menu after loading all assets
-   */
-  function mainMenu() {
-    $('#main').show();
-  }
-  /**
-   * Click handlers for the different menu screens
-   */
-  $('.play').click(function() {
-    $('#menu').hide();
-    startGame();
-  });
+function hide(el) {
+  el.style.display = 'hide';
+}
+/**
+ * Show element
+ */
+function show(el) {
+  el.style.display = 'block';
+} 
+/**
+ * Show the main menu after loading all assets
+ */
+function mainMenu() {
+  show(main);
+}
+/**
+ * Click handlers for the different menu screens
+ */
+document.querySelectorAll('.play')[0].addEventListener('click', function() {
+  hide(main);
+  startGame();
+});
 
-  var main = document.getElementById('main');
-  /**
-   * Hide element
-   */
-  function hide(el) {
-    el.style.display = 'hide';
-  }
-  /**
-   * Show element
-   */
-  function show(el) {
-    el.style.display = 'block';
-  } 
-  /**
-   * Show the main menu after loading all assets
-   */
-  function mainMenu() {
-    show(main);
-  }
-  /**
-   * Click handlers for the different menu screens
-   */
-  document.querySelectorAll('.play')[0].addEventListener('click', function() {
-    hide(main);
-    startGame();
-  });
-  
 // const shipImage = document.createElement('img');
 // shipImage.src = "assets/Gucci.png"; 
 
