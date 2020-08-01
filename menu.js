@@ -1,3 +1,9 @@
+(function() {
+    const $app = $('#app');
+    $app.addClass('has-loaded');
+  });
+
+
 /**
  * Asset pre-loader object. Loads all images
  */
